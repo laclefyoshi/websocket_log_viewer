@@ -18,7 +18,8 @@ def connected(result):
      ioloop.stop()
 
 def main(url):
-    status = tornado.websocket.websocket_connect(url, io_loop=ioloop, callback=connected)
+    status = tornado.websocket.websocket_connect(url, io_loop=ioloop,
+                                                 callback=connected)
     ioloop.start()
 
 if __name__ == "__main__":

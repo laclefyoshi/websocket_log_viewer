@@ -37,10 +37,6 @@ html = r"""<!doctype html>
 
 <script type="text/javascript">
 
-document.addEventListener('DOMContentLoaded', function () {
-    init();
-});
-
 function init() {
     var p = document.getElementById("contents");
     var len = parseInt(p.classList[0]);
@@ -56,6 +52,10 @@ function init() {
         p.innerHTML = logs.join("\n");
     };
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    init();
+});
 
 </script>
 </body>
